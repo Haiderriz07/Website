@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Maracuja Coffee</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+  <div class="loader">
+    <div class="coffee-cup">
+      <div class="coffee"></div>
+    </div>
+    <p>Brewing Experience...</p>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="Maracuja Coffee Logo">
+        </a>
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="order.html" class="btn-primary">Order Online</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-nav-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="cart-icon">
+        <a href="cart.html">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav">
+    <div class="close-mobile-nav">
+      <i class="fas fa-times"></i>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="order.html" class="btn-primary">Order Online</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="page-banner">
+      <div class="page-banner-content">
+        <h1>Our Menu</h1>
+        <nav class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <span class="current">Menu</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="menu-intro">
+      <div class="container">
+        <div class="intro-content animate-on-scroll fade-up">
+          <h2>Our Menu</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-filters">
+      <div class="container">
+        <div class="filters-container animate-on-scroll fade-up">
+          <div class="filter-group">
+            <h3>Filter by:</h3>
+            <div class="filter-buttons">
+              <button class="filter-btn active" onclick="window.filterMenuByTag('all')">All</button>
+              <button class="filter-btn" onclick="window.filterMenuByTag('Signature')">Signature</button>
+              <button class="filter-btn" onclick="window.filterMenuByTag('Vegetarian')">Vegetarian</button>
+              <button class="filter-btn" onclick="window.filterMenuByTag('Healthy')">Healthy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <div class="container">
+        <div id="menu-container" class="menu-container">      
+          <!-- Menu content will be dynamically added here by menu.js -->
+          <!-- BREAKFAST -->
+          <div class="menu-category">
+            <h2>Breakfast</h2>
+
+            <h3>On-The-Go</h3>
+            <ul>
+              <li>
+                <strong>Breakfast Bun</strong><br>
+                Eggs, sun-dried tomatoes, sautéed spinach & cheese on a brioche bun<br>
+                <span class="price">Rs 185</span>
+              </li>
+              <li>
+                <strong>Power Breakfast Wrap</strong><br>
+                Eggs, sun-dried tomatoes, avocado, spinach, cream cheese & feta<br>
+                <span class="price">Rs 225</span>
+              </li>
+              <li>
+                <strong>Filled Croissant</strong>
+                <ul class="sub-items">
+                  <li>Cheese & Tomato – Rs 145</li>
+                  <li>Salmon & Cream Cheese – Rs 235</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Dine-In</h3>
+            <ul>
+              <li>
+                <strong>Goodness Granola</strong><br>
+                Homemade granola with almonds, seeds & coconut shavings, served with vanilla yogurt & seasonal fruit<br>
+                <span class="price">Rs 175</span>
+              </li>
+              <li>
+                <strong>Tropical Breakfast Bowl</strong><br>
+                Papaya, mango, pineapple & banana topped with homemade granola, fruit, coconut flakes & chia seeds<br>
+                <span class="price">Rs 325</span>
+              </li>
+              <li>
+                <strong>Avocado Toast</strong><br>
+                Smashed avocado on sourdough with chili flakes & lemon<br>
+                <span class="price">Rs 185</span>
+              </li>
+              <li>
+                <strong>Eggs Done Your Way</strong><br>
+                Scrambled, fried or poached eggs with grilled tomatoes on sourdough toast<br>
+                <span class="price">Rs 195</span>
+              </li>
+              <li>
+                <strong>Eggs Benedict</strong><br>
+                Poached eggs on smashed avocado, drizzled with hollandaise on sourdough<br>
+                <span class="price">Rs 350</span>
+              </li>
+              <li>
+                <em>Add spinach Rs 50 / Add salmon Rs 125</em>
+              </li>
+            </ul>
+
+            <h3>Open Omelettes</h3>
+            <ul>
+              <li>
+                <strong>Bom Dia</strong><br>
+                Eggs, spinach, feta, sun-dried & cherry tomatoes<br>
+                <span class="price">Rs 245</span>
+              </li>
+              <li>
+                <strong>Shakshuka</strong><br>
+                Fried eggs in spicy tomato sauce with feta & coriander; served with sourdough<br>
+                <span class="price">Rs 295</span>
+              </li>
+              <li>
+                <strong>Maracuja Breakfast</strong><br>
+                Scrambled/poached/fried eggs, chicken sausage, mushrooms, baked beans & grilled cherry tomatoes with your choice of toast<br>
+                <span class="price">Rs 325</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- LUNCH -->
+          <div class="menu-category">
+            <h2>Lunch</h2>
+            <ul>
+              <li><strong>Falafel & Hummus Bowl</strong> – Rs 295</li>
+              <li><strong>Tofu & Peanut Veg Stir-Fry</strong> – Rs 315</li>
+              <li><strong>Chicken Stir-Fry</strong> – Rs 345</li>
+              <li><strong>Grilled Chicken Breast</strong> – Tender chicken breast on brown rice & quinoa with side salad – Rs 445</li>
+              <li><strong>Medley of Skewers</strong> – Chicken, beef & lamb kofta on brown rice & quinoa, with chimichurri & side salad – Rs 465</li>
+              <li><strong>250 g Sirloin Steak</strong> – Marinated sirloin with side salad and fries or mashed potatoes – Rs 675</li>
+            </ul>
+          </div>
+
+          <!-- BURGERS -->
+          <div class="menu-category">
+            <h2>Burgers</h2>
+            <ul>
+              <li><strong>Chicken Schnitzel Burger</strong> – Crispy chicken breast, lettuce & glazed onions in homemade sauce; served with fries – Rs 425</li>
+              <li><strong>Maracuja Beef Burger</strong> – Our signature oriental-spiced beef patty, served with fries – Rs 475</li>
+              <li><strong>Vegetarian Burger</strong> – Vegan patty on black bun with pickles, onion rings & red cabbage; served with side salad & sweet potato fries – Rs 525</li>
+            </ul>
+          </div>
+
+          <!-- PASTA -->
+          <div class="menu-category">
+            <h2>Pasta</h2>
+            <ul>
+              <li><strong>Mushroom & Spinach Tagliatelle</strong> – Rs 325 <em>(add chicken Rs 100)</em></li>
+              <li><strong>Arrabiata</strong> – Tomato base with a hint of spice, on penne – Rs 300 <em>(add shrimp Rs 125)</em></li>
+            </ul>
+          </div>
+
+          <!-- EXTRA SIDE ORDERS -->
+          <div class="menu-category">
+            <h2>Extra Side Orders</h2>
+            <ul>
+              <li>Side salad – Rs 75</li>
+              <li>Fries – Rs 85</li>
+              <li>Sweet potato fries – Rs 120</li>
+              <li>Sautéed vegetables – Rs 125</li>
+            </ul>
+          </div>
+
+          <!-- SALAD BOWLS (…and so on for the rest of your menu categories) -->
+            <!-- SALAD BOWLS -->
+  <div class="menu-category">
+    <h2>Salad Bowls</h2>
+
+    <ul>
+      <li>
+        <strong>Superfood Paleo Salad</strong><br>
+        Lettuce, avocado, kale, cherry tomatoes, cucumber, carrots, cashews, chia seeds & lemon-herb dressing<br>
+        <span class="price">Rs 325</span>
+      </li>
+    </ul>
+
+    <h3>Additional Salads</h3>
+    <ul>
+      <li>
+        <strong>Chicken Salad</strong><br>
+        Grilled chicken, roasted sweet potatoes, red cabbage, cherry tomatoes, red pepper, baby spinach, cucumber, parmesan & lemon-herb dressing<br>
+        <span class="price">Rs 365</span>
+      </li>
+      <li>
+        <strong>Keto Salad</strong><br>
+        Grilled chicken, lettuce, spinach, boiled egg, red onions, avocado, red pepper, roasted almonds & spicy avocado dressing<br>
+        <span class="price">Rs 365</span>
+      </li>
+      <li>
+        <strong>Crunchy Thai Peanut Salad</strong><br>
+        Chicken, napa cabbage, broccoli, celery, onions, red cabbage, cucumber, carrots, peanuts & Thai peanut dressing<br>
+        <span class="price">Rs 365</span>
+      </li>
+      <li>
+        <strong>Chipotle Beef Salad</strong><br>
+        Spicy beef, avocado, kale, spinach, red cabbage, cucumber, cherry tomatoes, onions, red pepper & chipotle lime ranch<br>
+        <span class="price">Rs 395</span>
+      </li>
+      <li>
+        <strong>Smoked Marlin Salad</strong><br>
+        Smoked marlin, lettuce, spinach, kale, cherry tomatoes, red cabbage, red pepper, pickles, sesame seeds & lemon-herb dressing<br>
+        <span class="price">Rs 395</span>
+      </li>
+      <li>
+        <strong>Shrimp & Feta Salad</strong><br>
+        Shrimp, lettuce, feta, olives, cucumber, cherry tomatoes, red onions, red pepper & lemon-herb dressing<br>
+        <span class="price">Rs 415</span>
+      </li>
+      <li><em>Extra Portions: Egg Rs 35 / Avocado Rs 65 / Chicken Rs 100 / Beef Rs 125</em></li>
+      <li><em>Salad notes: unavailable items can be replaced with a similar item.</em></li>
+    </ul>
+  </div>
+
+  <!-- MARACUJA TOAST & TOASTED SANDWICHES -->
+  <div class="menu-category">
+    <h2>Maracuja Toast & Toasted Sandwiches</h2>
+    <p><em>Artisanal rye bread & side salad</em></p>
+    <ul>
+      <li>
+        <strong>Avocado</strong><br>
+        Mozzarella, tomatoes & pesto<br>
+        <span class="price">Rs 315</span>
+      </li>
+      <li>
+        <strong>Turkey Sunrise</strong><br>
+        Turkey, feta, sun-dried tomatoes, egg, tomatoes & mustard<br>
+        <span class="price">Rs 345</span>
+      </li>
+      <li>
+        <strong>Tuna & Avo</strong><br>
+        Tuna, avocado, tomatoes & pesto<br>
+        <span class="price">Rs 345</span>
+      </li>
+      <li>
+        <strong>Spicy Marlin</strong><br>
+        Smoked marlin, tomatoes, jalapeños & chili sauce<br>
+        <span class="price">Rs 345</span>
+      </li>
+      <li>
+        <strong>Frutti Club</strong><br>
+        Chicken, avocado, tomatoes & pesto<br>
+        <span class="price">Rs 345</span>
+      </li>
+      <li><strong>Chicken Panini</strong> – Rs 185</li>
+      <li><strong>Veg Panini</strong> – Rs 165</li>
+    </ul>
+  </div>
+
+  <!-- WRAPS -->
+  <div class="menu-category">
+    <h2>Wraps</h2>
+    <ul>
+      <li>
+        <strong>All the Greens</strong><br>
+        Hummus, avocado, lettuce, kale, red cabbage, cucumber, carrots, chia seeds & lemon-herb dressing<br>
+        <span class="price">Rs 275</span>
+      </li>
+      <li>
+        <strong>Crunchy Thai</strong><br>
+        Grilled chicken, lettuce, onions, cabbage, cucumber, carrots, red peppers & Thai peanut dressing<br>
+        <span class="price">Rs 325</span>
+      </li>
+      <li>
+        <strong>Chipotle Beef</strong><br>
+        Spicy beef, lettuce, avocado, jalapeños, cabbage, cucumber, onions, red pepper & chipotle lime ranch<br>
+        <span class="price">Rs 345</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- DESSERTS -->
+  <div class="menu-category">
+    <h2>Desserts</h2>
+    <ul>
+      <li><strong>Crepes with Nutella</strong> – Rs 185</li>
+      <li><strong>Ice Cream & Hot Chocolate Sauce</strong> – Rs 185</li>
+      <li><strong>Waffle with Vanilla Ice-Cream & Berries</strong> – Rs 235</li>
+      <li><strong>Frozen Yogurt</strong> (Tropical / Forest Fruits) – Rs 225</li>
+      <li><em>Pastries & cakes on display</em></li>
+    </ul>
+  </div>
+
+  <!-- BEVERAGES -->
+  <div class="menu-category">
+    <h2>Beverages</h2>
+
+    <h3>Hot Coffees</h3>
+    <ul>
+      <li>Espresso – Rs 85</li>
+      <li>Americano – Rs 100</li>
+      <li>Flat White – Rs 120</li>
+      <li>Cappuccino – Rs 120</li>
+      <li>Latte – Rs 125</li>
+      <li>Mochaccino – Rs 135</li>
+      <li>Cortado – Rs 135</li>
+      <li>Flavoured Latte (Caramel, Hazelnut, Vanilla, Pumpkin Spice) – Rs 165</li>
+      <li>Chai Latte – Rs 165</li>
+      <li>Tea – Rs 75</li>
+      <li>Hot Chocolate – Rs 135</li>
+    </ul>
+
+    <h3>Cold Coffees</h3>
+    <ul>
+      <li>Affogato – Rs 110</li>
+      <li>Iced Latte – Rs 150</li>
+      <li>Blue Coffee – Rs 165</li>
+      <li>Lemon Coffee – Rs 145</li>
+      <li>Maracuja Coffee – Rs 165</li>
+      <li>Gourmet Caramel Frappe – Rs 245</li>
+      <li>Gourmet Chocolate Frappe – Rs 245</li>
+    </ul>
+
+    <h3>Milkshakes</h3>
+    <ul>
+      <li>Vanilla – Rs 150 (Regular) / Rs 185 (Large)</li>
+      <li>Chocolate – Rs 150 / Rs 185</li>
+      <li>Strawberry – Rs 175 / Rs 225</li>
+      <li>Oreo – Rs 175 / Rs 225</li>
+    </ul>
+
+    <h3>Other Beverages</h3>
+    <ul>
+      <li>Sparkling Water 70cl (San Pellegrino) – Rs 165</li>
+      <li>Aranciata – Rs 125</li>
+      <li>Aranciata Rosa – Rs 125</li>
+      <li>Lemoncini – Rs 125</li>
+      <li>Pomelino – Rs 125</li>
+      <li>Coca-Cola, Coke Zero, Fanta, Sprite – Rs 85</li>
+      <li>Appletiser – Rs 110</li>
+      <li>Homemade Iced Tea (Peach, Lemon, Watermelon, Lychee) – Rs 145</li>
+    </ul>
+  </div>
+
+  <!-- FRESH JUICE -->
+  <div class="menu-category">
+    <h2>Fresh Juice</h2>
+    <ul>
+      <li>Fresh Orange – Rs 215 (Regular) / Rs 265 (Large)</li>
+      <li>Vitamin Boost – Rs 215 / Rs 265</li>
+      <li>Tropical Mix – Rs 215 / Rs 265</li>
+      <li>Kyle’s Green – Rs 215 / Rs 265</li>
+      <li>Mara Roots – Rs 215 / Rs 265</li>
+    </ul>
+  </div>
+
+  <!-- SMOOTHIES -->
+  <div class="menu-category">
+    <h2>Smoothies</h2>
+    <ul>
+      <li>Tropical Tango – Rs 215 / Rs 265</li>
+      <li>Strawberry Bliss – Rs 215 / Rs 265</li>
+      <li>Wild Berries – Rs 215 / Rs 265</li>
+      <li>Mara Green – Rs 215 / Rs 265</li>
+      <li>Island Green – Rs 215 / Rs 265</li>
+      <li>Tropical Beet – Rs 215 / Rs 265</li>
+    </ul>
+  </div>
+
+  <!-- PROTEIN SHAKES -->
+  <div class="menu-category">
+    <h2>Protein Shakes</h2>
+    <ul>
+      <li>
+        <strong>Cinnamon Bomb</strong><br>
+        Whey protein, banana, almond macadamia butter, cinnamon, honey & skimmed milk<br>
+        <span class="price">Rs 245 (Regular) / Rs 295 (Large)</span>
+      </li>
+      <li>
+        <strong>Peanut Butter Bomb</strong><br>
+        Whey protein, sugar-free peanut butter, banana, cocoa & skimmed milk<br>
+        <span class="price">Rs 245 / Rs 295</span>
+      </li>
+      <li>
+        <strong>Blueberry Almond Vegan Bomb</strong><br>
+        Vegan plant protein, blueberries, almond macadamia butter & skimmed milk<br>
+        <span class="price">Rs 275 / Rs 345</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- SMOOTHIE BOWLS -->
+  <div class="menu-category">
+    <h2>Smoothie Bowls</h2>
+    <ul>
+      <li>
+        <strong>Berry Smoothie Bowl</strong><br>
+        Wild berries & banana, topped with strawberries, coconut flakes, chia seeds & almonds<br>
+        <span class="price">Rs 325</span>
+      </li>
+      <li>
+        <strong>Blueberry Acai Bowl</strong><br>
+        Acai berries, blueberries & banana, topped with granola, banana, blueberries & honey<br>
+        <span class="price">Rs 375</span>
+      </li>
+      <li>
+        <strong>Choc Protein Bowl</strong><br>
+        Whey protein, cocoa, banana, almond macadamia butter & granola, topped with dark chocolate & chia seeds<br>
+        <span class="price">Rs 375</span>
+      </li>
+      <li>
+        <strong>Blueberry Almond Protein Bowl</strong><br>
+        Blueberries, banana, almond macadamia butter, plant protein, topped with blueberries & almonds<br>
+        <span class="price">Rs 375</span>
+      </li>
+    </ul>
+  </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-cta">
+      <div class="container">
+        <div class="cta-content animate-on-scroll fade-up">
+          <h2>Ready to Order?</h2>
+          <p>Enjoy our delicious menu items at home or office</p>
+          <div class="cta-buttons">
+            <a href="order.html" class="btn-primary">Order Online</a>
+            <a href="contact.html" class="btn-secondary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="special-dietary">
+      <div class="container">
+        <div class="dietary-content animate-on-scroll fade-up">
+          <h2>Special Dietary Requirements</h2>
+          <p>We understand the importance of catering to various dietary needs. Please inform our staff about any allergies or special dietary requirements, and we'll do our best to accommodate your needs.</p>
+          
+          <div class="dietary-options">
+            <div class="dietary-option">
+              <i class="fas fa-seedling"></i>
+              <h3>Vegetarian Options</h3>
+              <p>We offer a variety of delicious vegetarian dishes.</p>
+            </div>
+            
+            <div class="dietary-option">
+              <i class="fas fa-wheat-awn-circle-exclamation"></i>
+              <h3>Gluten-Free</h3>
+              <p>Several dishes can be prepared gluten-free upon request.</p>
+            </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="assets/images/logo.png" alt="Maracuja Coffee Logo">
+          <p>Premium coffee & dining experience in Moka</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="order.html">Order Online</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <address>
+            <p><i class="fas fa-map-marker-alt"></i> Vivea Business Park, Moka, Mauritius</p>
+            <p><i class="fas fa-phone"></i> +230 58158838</p>
+            <p><i class="fas fa-envelope"></i> info@maracujacoffee.com</p>
+          </address>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/maracujacoffee/" aria-label="Instagrm "><i class="fab fa-instagram"></i></a> 
+            <a href="https://www.facebook.com/p/Maracuja-Coffee-100087914539648/" aria-label="Facebook"><i class="fab fa-facebook"></i></a> 
+            <a href="https://wa.me/23058158838?text=Hello%20Maracuja%20Coffee!%20I%27d%20like%20to%20place%20an%20order." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Maracuja Coffee. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Maracuja Coffee</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Utility for centering text */
+    .text-center { text-align: center; }
+    /* Simple card styling for team members */
+    .team-member.card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+  </style>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader">
+    <div class="coffee-cup"><div class="coffee"></div></div>
+    <p>Brewing Experience...</p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html"><img src="assets/images/logo.png" alt="Maracuja Coffee Logo"></a>
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html" class="btn-primary">Order Online</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-nav-toggle"><i class="fas fa-bars"></i></div>
+      <div class="cart-icon">
+        <a href="cart.html"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <div class="close-mobile-nav"><i class="fas fa-times"></i></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="order.html" class="btn-primary">Order Online</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section class="page-banner text-center">
+      <div class="page-banner-content">
+        <h1>About Us</h1>
+        <nav class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <span class="current">About Us</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="about-intro animate-on-scroll fade-up text-center">
+      <div class="container">
+        <div class="intro-content">
+          <h2>Our Story</h2>
+          <p>Founded with a passion for exceptional coffee and vibrant flavors, Maracuja Coffee began as a small café in the heart of Moka. Over the years, we've grown into a beloved destination, known for our innovative passion fruit-infused creations and warm, welcoming atmosphere.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission-vision animate-on-scroll fade-up text-center">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <h3>Our Mission</h3>
+            <p>To create memorable taste experiences by blending high-quality coffee with unique tropical ingredients, all while fostering community and sustainability.</p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-leaf"></i>
+            <h4>Sustainability</h4>
+            <p>We partner with eco-friendly suppliers and minimize waste.</p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-heart"></i>
+            <h4>Community</h4>
+            <p>Our café is a gathering place where connections flourish.</p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Innovation</h4>
+            <p>We continually experiment with flavors to delight our guests.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team animate-on-scroll fade-up">
+      <div class="container text-center">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+          <div class="team-member card">
+            <img src="assets/images/munya.jpg" alt="Chef Munya">
+            <h4>Chef Munya</h4>
+            <p>Head Chef - Fusion Cuisine Expert</p>
+          </div>
+          <div class="team-member card">
+            <img src="assets/images/barista1.jpg" alt="Barista A">
+            <h4>Barista A</h4>
+            <p>Latte Art Specialist</p>
+          </div>
+          <div class="team-member card">
+            <img src="assets/images/barista2.jpg" alt="Barista B">
+            <h4>Barista B</h4>
+            <p>Cold Brew Enthusiast</p>
+          </div>
+          <div class="team-member card">
+            <img src="assets/images/barista3.jpg" alt="Barista C">
+            <h4>Barista C</h4>
+            <p>Espresso Connoisseur</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="assets/images/logo.png" alt="Maracuja Coffee Logo">
+          <p>Premium coffee & dining in Moka</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="order.html">Order Online</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <address>
+            <p><i class="fas fa-map-marker-alt"></i> Vivea Business Park, Moka, Mauritius</p>
+            <p><i class="fas fa-phone"></i> +230 5XXX XXXX</p>
+            <p><i class="fas fa-envelope"></i> info@maracujacoffee.com</p>
+          </address>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Maracuja Coffee. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-to-top"><i class="fas fa-arrow-up"></i></div>
+</body>
+</html>
